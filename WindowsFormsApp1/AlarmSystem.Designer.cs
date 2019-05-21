@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
@@ -39,16 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this._16jailDataSet = new WindowsFormsApp1._16jailDataSet();
-            this.criminalRewardsPunishmentTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.criminalRewardsPunishmentTableTableAdapter = new WindowsFormsApp1._16jailDataSetTableAdapters.criminalRewardsPunishmentTableTableAdapter();
-            this.ciriminalIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rewardsPunishmentTagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalScoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._16jailDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.criminalRewardsPunishmentTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -67,15 +57,8 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ciriminalIDDataGridViewTextBoxColumn,
-            this.rewardsPunishmentTagDataGridViewTextBoxColumn,
-            this.scoreDataGridViewTextBoxColumn,
-            this.totalScoreDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.criminalRewardsPunishmentTableBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(41, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
@@ -170,44 +153,6 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "RFID：";
             // 
-            // _16jailDataSet
-            // 
-            this._16jailDataSet.DataSetName = "_16jailDataSet";
-            this._16jailDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // criminalRewardsPunishmentTableBindingSource
-            // 
-            this.criminalRewardsPunishmentTableBindingSource.DataMember = "criminalRewardsPunishmentTable";
-            this.criminalRewardsPunishmentTableBindingSource.DataSource = this._16jailDataSet;
-            // 
-            // criminalRewardsPunishmentTableTableAdapter
-            // 
-            this.criminalRewardsPunishmentTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // ciriminalIDDataGridViewTextBoxColumn
-            // 
-            this.ciriminalIDDataGridViewTextBoxColumn.DataPropertyName = "ciriminalID";
-            this.ciriminalIDDataGridViewTextBoxColumn.HeaderText = "ciriminalID";
-            this.ciriminalIDDataGridViewTextBoxColumn.Name = "ciriminalIDDataGridViewTextBoxColumn";
-            // 
-            // rewardsPunishmentTagDataGridViewTextBoxColumn
-            // 
-            this.rewardsPunishmentTagDataGridViewTextBoxColumn.DataPropertyName = "RewardsPunishmentTag";
-            this.rewardsPunishmentTagDataGridViewTextBoxColumn.HeaderText = "RewardsPunishmentTag";
-            this.rewardsPunishmentTagDataGridViewTextBoxColumn.Name = "rewardsPunishmentTagDataGridViewTextBoxColumn";
-            // 
-            // scoreDataGridViewTextBoxColumn
-            // 
-            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "score";
-            this.scoreDataGridViewTextBoxColumn.HeaderText = "score";
-            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
-            // 
-            // totalScoreDataGridViewTextBoxColumn
-            // 
-            this.totalScoreDataGridViewTextBoxColumn.DataPropertyName = "totalScore";
-            this.totalScoreDataGridViewTextBoxColumn.HeaderText = "totalScore";
-            this.totalScoreDataGridViewTextBoxColumn.Name = "totalScoreDataGridViewTextBoxColumn";
-            // 
             // AlarmSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -227,8 +172,6 @@
             this.Text = "AlarmSystem";
             this.Load += new System.EventHandler(this.BasicSituation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._16jailDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.criminalRewardsPunishmentTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,12 +189,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private _16jailDataSet _16jailDataSet;
-        private System.Windows.Forms.BindingSource criminalRewardsPunishmentTableBindingSource;
-        private _16jailDataSetTableAdapters.criminalRewardsPunishmentTableTableAdapter criminalRewardsPunishmentTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ciriminalIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rewardsPunishmentTagDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalScoreDataGridViewTextBoxColumn;
     }
 }

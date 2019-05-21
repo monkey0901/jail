@@ -115,11 +115,6 @@
     <Compile Include="ScoreManagement1.Designer.cs">
       <DependentUpon>ScoreManagement1.cs</DependentUpon>
     </Compile>
-    <Compile Include="_16jailDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_16jailDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BasicInformation.resx">
       <DependentUpon>BasicInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,17 +164,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_16jailDataSet.xsc">
-      <DependentUpon>_16jailDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_16jailDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_16jailDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_16jailDataSet.xss">
-      <DependentUpon>_16jailDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
