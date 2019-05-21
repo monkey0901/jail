@@ -32,8 +32,8 @@ namespace DAL
             }
         }
 
-        //返回查询记录
-        public static List<CriminalBasicInfoTable> GetAll(string s)
+        //ID查询
+        public static List<CriminalBasicInfoTable> GetID(string s)
         {
             using (CriminalDbContext db = new CriminalDbContext())
             {
@@ -49,6 +49,41 @@ namespace DAL
 
             }
         }
+        //姓名查询
+        public static List<CriminalBasicInfoTable> GetName(string s)
+        {
+            using (CriminalDbContext db = new CriminalDbContext())
+            {
+                var CrimeQuery1 = from b in db.CriminalBasicInfo
+                                  where b.criminalName.Contains(s)
+                                  orderby b.criminalName
+                                  select b;
+                List<CriminalBasicInfoTable> CrimeList = new List<CriminalBasicInfoTable>();
+
+                CrimeList = CrimeQuery1.ToList();
+
+                return CrimeList;
+
+            }
+        }
+        //RFID查询
+        public static List<CriminalBasicInfoTable> GetRFIDNumber(string s)
+        {
+            using (CriminalDbContext db = new CriminalDbContext())
+            {
+                var CrimeQuery1 = from b in db.CriminalBasicInfo
+                                  where b.RFIDNumber.Contains(s)
+                                  orderby b.RFIDNumber
+                                  select b;
+                List<CriminalBasicInfoTable> CrimeList = new List<CriminalBasicInfoTable>();
+
+                CrimeList = CrimeQuery1.ToList();
+
+                return CrimeList;
+
+            }
+        }
+
         //添加记录
         public static bool Insert(CriminalBasicInfoTable user)
         {

@@ -15,17 +15,25 @@ namespace WindowsFormsApp1
         //查询
         private void Button4_Click(object sender, EventArgs e)
         {
-            if (textBox3 == null && textBox1 == null && textBox2 == null)
+            if (string.IsNullOrEmpty(textBox3.Text) == true || string.IsNullOrEmpty(textBox1.Text) == true || string.IsNullOrEmpty(textBox2.Text) == true)
             {
                 dataGridView1.DataSource = ButtonAction.GetAll();
             }
-            else
+            if (string.IsNullOrEmpty(textBox1.Text) != true)//RFID
             {
-                dataGridView1.DataSource = ButtonAction.GetAll(textBox3.Text);
-            }
+                dataGridView1.DataSource = ButtonAction.GetRFIDNumber(textBox1.Text);
 
+            }
+            if (string.IsNullOrEmpty(textBox2.Text) != true)//name
+            {
+                dataGridView1.DataSource = ButtonAction.GetName(textBox2.Text);
+            }
+            if (string.IsNullOrEmpty(textBox3.Text) != true)//ID
+            {
+                dataGridView1.DataSource = ButtonAction.GetID(textBox3.Text);
+            }
         }
-        
+
 
 
         //删除
@@ -36,7 +44,6 @@ namespace WindowsFormsApp1
             ButtonAction.Delete(cr);
             MessageBox.Show("删除成功!");
             dataGridView1.DataSource = ButtonAction.GetAll();
-
         }
 
         //保存//更新
